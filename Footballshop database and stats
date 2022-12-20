@@ -1,0 +1,26 @@
+Create a footballshop database
+
+
+CREATE TABLE fotballshop (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, colour TEXT, quantity INTEGER, aisle INTEGER, sold INTEGER) 
+
+;INSERT INTO fotballshop VALUES (1, "MAN UTD", 900, "Red", 900, 1, 850)
+;INSERT INTO fotballshop VALUES (2, "MAN CITY", 900, "Blue", 900, 1, 800)
+;INSERT INTO fotballshop VALUES (3, "Chelsea", 900, "Blue", 900, 1, 830)
+;INSERT INTO fotballshop VALUES (4, "Liverpool", 900, "Red", 900, 1, 840)
+;INSERT INTO fotballshop VALUES (5, "Arsenal", 900, "Red", 900, 2, 800)
+;INSERT INTO fotballshop VALUES (6, "Newcastle", 900, "Black", 700, 2, 500)
+;INSERT INTO fotballshop VALUES (7, "Spurs", 800, "White", 700, 2, 550)
+;INSERT INTO fotballshop VALUES (8, "Wolves", 750, "Orange", 650, 3, 100)
+;INSERT INTO fotballshop VALUES (9, "West Ham", 750, "Purple", 650, 3, 400)
+;INSERT INTO fotballshop VALUES (10, "Leeds", 750, "White", 650, 4, 700)
+;INSERT INTO fotballshop VALUES (11, "Leicecster", 800, "Blue", 700, 4, 350)
+;INSERT INTO fotballshop VALUES (12, "Aston Villa", 800, "Purple", 800, 5, 50)
+;INSERT INTO fotballshop VALUES (13, "Fulham", 500, "White", 100, 5, 100)
+;INSERT INTO fotballshop VALUES (14, "Brentford", 350, "Red", 50, 5, 33)
+;INSERT INTO fotballshop VALUES (15, "Everton", 500, "Blue", 500, 6, 188)
+
+display the databse ordered by price.
+SELECT * FROM fotballshop ORDER BY price;
+
+what is the average price of items from aisle 4 and 5 
+SELECT AVG(price) FROM fotballshop WHERE aisle >3;
