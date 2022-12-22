@@ -1,0 +1,32 @@
+/* Create table about the people and what they do here */
+CREATE TABLE famous_people (id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, birthdate TEXT, movies TEXT);
+
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Leonardo", "DiCaprio", "11-11-1974", "The Wolf Of wallstreet");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Kate", "Winslet", "5-8-1975", "Titanic");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Brad", "Pitt", "18-12-1963", "Fight Club");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("George", "Clooney", "6-5-1961", "Ocean's Eleven");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Johnny", "Depp", "9-6-1963", "Pirates of the Carribean");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Daniel", "Day-Lewis", "29-4-1957", "There will be blood");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Tom", "Hanks", "9-7-1956", "Forrest Gump");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Cate", "Blanchett", "14-5-1969", "The Aviator");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Al", "Pacino", "25-4-1940", "The Godfather");
+INSERT INTO famous_people (first_name, last_name, birthdate, movies) VALUES ("Natalie", "Portman", "9-6-1981", "Black Swan"); 
+
+CREATE TABLE movies_information (id INTEGER PRIMARY KEY AUTOINCREMENT, actor_id INTEGER, release_year INTEGER);
+
+INSERT INTO movies_information (actor_id, release_year) VALUES (1, 2013)
+;INSERT INTO movies_information (actor_id, release_year) VALUES (2, 1997)
+;INSERT INTO movies_information (actor_id, release_year) VALUES (3, 1999)
+;INSERT INTO movies_information (actor_id, release_year) VALUES (4, 2001);
+INSERT INTO movies_information (actor_id, release_year) VALUES (5, 2006);
+INSERT INTO movies_information (actor_id, release_year) VALUES (6, 2007)
+;INSERT INTO movies_information (actor_id, release_year) VALUES (7, 1994)
+;INSERT INTO movies_information (actor_id, release_year) VALUES (8, 2004)
+;INSERT INTO movies_information (actor_id, release_year) VALUES (9, 1972)
+;INSERT INTO movies_information (actor_id, release_year) VALUES (10, 2010)
+
+/* Which year are these movies released? */
+
+;SELECT famous_people.first_name, famous_people.last_name, movies, release_year FROM famous_people JOIN movies_information ON famous_people.id = movies_information.actor_id GROUP BY release_year
+
+
